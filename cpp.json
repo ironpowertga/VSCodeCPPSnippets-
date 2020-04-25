@@ -1,0 +1,32 @@
+{
+	"GetSetH": {
+		"prefix": "getsetH",
+		"body": [
+			"void $1($2 value);",
+			"$2 $1() const;"
+		],
+		"description": ""
+	},
+	
+	"GetSetC": {
+		"prefix": "getsetC",
+		"body": [
+			"void $1::$2($3 $4)",
+			"{",
+			"\t$5 = $4;"
+			,"}",
+			"$3 $1::$2() const",
+			"{",
+			"\treturn $5;",
+			"}"
+		],
+		"description": ""
+	},
+	"cout": {
+		"prefix": "cout",
+		"body": [
+			"std::cout<< $1 <<std::endl;"
+		],
+		"description": ""
+	}
+}
